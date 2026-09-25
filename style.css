@@ -1,7 +1,3 @@
-/* =========================================
-   FRIDAY AI — FUTURISTIC DOWNLOAD WEBSITE
-   ========================================= */
-
 *{
   margin:0;
   padding:0;
@@ -21,43 +17,18 @@ body{
 }
 
 
-/* =========================================
-   BACKGROUND
-   ========================================= */
-
-body::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:50;
-
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 3px,
-      rgba(255,255,255,.012) 4px
-    );
-}
+/* BACKGROUND */
 
 .stars{
   position:fixed;
   inset:0;
   pointer-events:none;
   z-index:0;
-
   opacity:.55;
 
   background-image:
-    radial-gradient(
-      #b94cff 1px,
-      transparent 1px
-    ),
-    radial-gradient(
-      #fff 1px,
-      transparent 1px
-    );
+    radial-gradient(#b94cff 1px,transparent 1px),
+    radial-gradient(#fff 1px,transparent 1px);
 
   background-size:
     90px 90px,
@@ -71,19 +42,11 @@ body::after{
 }
 
 @keyframes starsMove{
-
-  0%{
-    background-position:
-      20px 30px,
-      70px 90px;
-  }
-
-  100%{
+  to{
     background-position:
       120px 150px,
       170px 200px;
   }
-
 }
 
 
@@ -92,40 +55,21 @@ body::after{
   inset:0;
   z-index:0;
   pointer-events:none;
-
-  opacity:.10;
+  opacity:.1;
 
   background-image:
-    linear-gradient(
-      rgba(160,60,220,.5) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(160,60,220,.5) 1px,
-      transparent 1px
-    );
+    linear-gradient(rgba(160,60,220,.5) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(160,60,220,.5) 1px,transparent 1px);
 
   background-size:60px 60px;
-
-  mask-image:
-    linear-gradient(
-      to bottom,
-      black,
-      transparent 80%
-    );
 }
 
 
-/* =========================================
-   HEADER
-   ========================================= */
+/* HEADER */
 
 header{
   height:76px;
-
-  padding:
-    10px 6%;
+  padding:10px 6%;
 
   display:flex;
   align-items:center;
@@ -134,35 +78,26 @@ header{
   position:relative;
   z-index:10;
 
-  background:
-    rgba(5,0,8,.78);
-
-  border-bottom:
-    1px solid rgba(150,55,210,.3);
+  background:rgba(5,0,8,.8);
+  border-bottom:1px solid rgba(150,55,210,.3);
 
   backdrop-filter:blur(15px);
 }
 
-
 .brand{
   display:flex;
   align-items:center;
-
   gap:12px;
 
   font-size:15px;
   font-weight:bold;
-
   letter-spacing:3px;
 }
-
 
 .brand img{
   width:43px;
   height:43px;
-
   object-fit:cover;
-
   border-radius:11px;
 
   box-shadow:
@@ -170,52 +105,38 @@ header{
     0 0 30px #8b28ff66;
 }
 
-
 .brand b{
   color:#c451ff;
 }
 
-
 .github{
-  padding:
-    11px 16px;
+  padding:11px 16px;
 
-  border:
-    1px solid #713098;
-
+  border:1px solid #713098;
   border-radius:9px;
 
   color:#dca9ed;
-
   text-decoration:none;
 
   font-size:11px;
-
   letter-spacing:2px;
 
   transition:.3s;
 }
 
-
 .github:hover{
   color:#fff;
-
   border-color:#c451ff;
-
-  box-shadow:
-    0 0 25px #a32dff66;
+  box-shadow:0 0 25px #a32dff66;
 }
 
 
-/* =========================================
-   HERO
-   ========================================= */
+/* HERO */
 
 .hero{
   min-height:690px;
 
-  padding:
-    55px 20px 80px;
+  padding:55px 20px 80px;
 
   display:flex;
   align-items:center;
@@ -228,30 +149,21 @@ header{
 }
 
 
-/* SYSTEM STATUS */
+/* STATUS */
 
 .status{
-  padding:
-    10px 19px;
+  padding:10px 19px;
 
-  border:
-    1px solid #7835a4;
-
+  border:1px solid #7835a4;
   border-radius:30px;
 
   color:#d69aff;
 
-  background:
-    rgba(120,25,160,.08);
-
   font-size:11px;
-
   letter-spacing:3px;
 
-  box-shadow:
-    0 0 20px rgba(145,40,220,.12);
+  background:rgba(120,25,160,.08);
 }
-
 
 .status span{
   display:inline-block;
@@ -265,22 +177,17 @@ header{
 
   background:#b83dff;
 
-  box-shadow:
-    0 0 15px #c44cff;
+  box-shadow:0 0 15px #c44cff;
 }
 
 
-/* =========================================
-   MAIN FRIDAY LOGO
-   ========================================= */
+/* LOGO */
 
 .logo-box{
-
   width:200px;
   height:200px;
 
-  margin:
-    30px 0 20px;
+  margin:30px 0 20px;
 
   position:relative;
 
@@ -288,11 +195,7 @@ header{
   place-items:center;
 }
 
-
-/* ACTUAL IMAGE */
-
 .hero-logo{
-
   width:135px;
   height:135px;
 
@@ -301,84 +204,59 @@ header{
   border-radius:28px;
 
   position:relative;
-
   z-index:3;
 
   box-shadow:
     0 0 20px #8b27ff,
     0 0 50px rgba(140,40,255,.45);
 
-  animation:
-    logoFloat 4s ease-in-out infinite;
+  animation:logoFloat 4s ease-in-out infinite;
 }
 
-
 @keyframes logoFloat{
-
-  0%,
-  100%{
-    transform:translateY(0);
-  }
-
   50%{
     transform:translateY(-7px);
   }
-
 }
 
 
-/* =========================================
-   LOGO ORBITS
-   ========================================= */
+/* ORBITS */
 
 .ring{
   position:absolute;
 
-  border:
-    1px solid rgba(181,70,255,.55);
+  border:1px solid rgba(181,70,255,.55);
 
   border-radius:50%;
-
   z-index:1;
 }
 
-
 .ring1{
-
   width:170px;
   height:170px;
 
-  animation:
-    orbitOne 9s linear infinite;
+  animation:orbitOne 9s linear infinite;
 }
 
-
 .ring2{
-
   width:190px;
   height:125px;
 
   transform:rotate(55deg);
 
-  animation:
-    orbitTwo 11s linear infinite;
+  animation:orbitTwo 11s linear infinite;
 }
 
-
 .ring3{
-
   width:150px;
   height:190px;
 
   transform:rotate(-35deg);
 
-  animation:
-    orbitOne 13s linear infinite;
+  animation:orbitOne 13s linear infinite;
 }
 
-
 @keyframes orbitOne{
-
   from{
     transform:rotate(0deg);
   }
@@ -386,12 +264,9 @@ header{
   to{
     transform:rotate(360deg);
   }
-
 }
 
-
 @keyframes orbitTwo{
-
   from{
     transform:rotate(55deg);
   }
@@ -399,42 +274,31 @@ header{
   to{
     transform:rotate(-305deg);
   }
-
 }
 
 
-/* =========================================
-   HERO TEXT
-   ========================================= */
+/* TEXT */
 
 .mini{
-
   margin-bottom:15px;
 
   color:#b96de2;
 
   font-size:10px;
-
   letter-spacing:4px;
 }
 
-
 h1{
-
   margin-bottom:18px;
 
-  font-size:
-    clamp(45px,10vw,90px);
+  font-size:clamp(45px,10vw,90px);
 
   line-height:1;
-
   letter-spacing:5px;
 }
 
-
 h1 strong,
 h2 strong{
-
   color:#c451ff;
 
   text-shadow:
@@ -442,31 +306,24 @@ h2 strong{
     0 0 30px #7b16b8;
 }
 
-
 .description{
-
   max-width:650px;
 
   color:#bca9c5;
 
   font-size:15px;
-
   line-height:1.8;
 }
 
 
-/* =========================================
-   BUTTONS
-   ========================================= */
+/* BUTTONS */
 
 .buttons{
-
   width:100%;
 
   margin-top:30px;
 
   display:flex;
-
   justify-content:center;
   align-items:center;
 
@@ -476,12 +333,9 @@ h2 strong{
 }
 
 
-/* =========================================
-   GOLD DOWNLOAD BUTTON
-   ========================================= */
+/* GOLD DOWNLOAD */
 
 .download{
-
   display:inline-flex;
 
   align-items:center;
@@ -490,11 +344,9 @@ h2 strong{
   gap:7px;
 
   position:relative;
-
   overflow:hidden;
 
-  padding:
-    16px 28px;
+  padding:16px 28px;
 
   min-width:250px;
 
@@ -505,19 +357,17 @@ h2 strong{
   background:
     linear-gradient(
       135deg,
-      #fff4a8 0%,
-      #ffd700 35%,
-      #ffb000 70%,
-      #ffe477 100%
+      #fff4a8,
+      #ffd700,
+      #ffb000,
+      #ffe477
     );
 
-  border:
-    1px solid #fff09a;
+  border:1px solid #fff09a;
 
   text-decoration:none;
 
   font-weight:bold;
-
   letter-spacing:1.5px;
 
   box-shadow:
@@ -525,22 +375,15 @@ h2 strong{
     0 0 28px #ffb300,
     0 0 60px rgba(255,157,0,.3);
 
-  transition:
-    transform .25s,
-    box-shadow .25s;
+  transition:.25s;
 }
-
 
 .download span{
   font-size:20px;
 }
 
-
 .download:hover{
-
-  transform:
-    translateY(-5px)
-    scale(1.02);
+  transform:translateY(-5px) scale(1.02);
 
   box-shadow:
     0 0 18px #fff0a0,
@@ -548,19 +391,14 @@ h2 strong{
     0 0 75px #ff9d00;
 }
 
-
 .download:active{
-
-  transform:
-    scale(.96);
-
+  transform:scale(.96);
 }
 
 
 /* GOLD SHINE */
 
 .download::before{
-
   content:"";
 
   position:absolute;
@@ -579,16 +417,12 @@ h2 strong{
       transparent
     );
 
-  transform:
-    skewX(-20deg);
+  transform:skewX(-20deg);
 
-  animation:
-    goldShine 3.5s infinite;
+  animation:goldShine 3.5s infinite;
 }
 
-
 @keyframes goldShine{
-
   0%{
     left:-100%;
   }
@@ -600,16 +434,14 @@ h2 strong{
   100%{
     left:150%;
   }
-
 }
 
 
 /* =========================================
-   EXPLORE BUTTON
+   ORANGE EXPLORE AI BUTTON
    ========================================= */
 
-.explore{
-
+.explore-ai{
   display:inline-flex;
 
   align-items:center;
@@ -617,48 +449,61 @@ h2 strong{
 
   min-width:180px;
 
-  padding:
-    15px 28px;
+  padding:15px 28px;
 
-  border:
-    1px solid #7834a0;
-
+  border:1px solid #ff6a00;
   border-radius:10px;
 
-  color:#dcb2ed;
+  color:#fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff9d2e,
+      #ff6500
+    );
 
   text-decoration:none;
 
+  font-weight:bold;
+
   letter-spacing:1.5px;
+
+  box-shadow:
+    0 0 12px #ff6500,
+    0 0 30px rgba(255,80,0,.4);
 
   transition:.3s;
 }
 
+.explore-ai:hover{
+  transform:translateY(-5px);
 
-.explore:hover{
-
-  color:#fff;
-
-  border-color:#c451ff;
+  background:
+    linear-gradient(
+      135deg,
+      #ffb04a,
+      #ff6500
+    );
 
   box-shadow:
-    0 0 25px rgba(168,50,204,.4);
+    0 0 20px #ff8a00,
+    0 0 45px #ff650088;
+}
 
+.explore-ai:active{
+  transform:scale(.95);
 }
 
 
-/* =========================================
-   INFO
-   ========================================= */
+/* INFO */
 
 .info{
-
   margin-top:55px;
 
   display:flex;
 
   justify-content:center;
-
   align-items:center;
 
   gap:55px;
@@ -666,67 +511,47 @@ h2 strong{
   flex-wrap:wrap;
 }
 
-
 .info div{
-
   display:flex;
-
   flex-direction:column;
-
   gap:8px;
 }
 
-
 .info b{
-
   color:#75468a;
 
   font-size:9px;
-
   letter-spacing:2px;
 }
 
-
 .info span{
-
   color:#e5c7ef;
-
   font-size:12px;
 }
 
 
-/* =========================================
-   FEATURES
-   ========================================= */
+/* FEATURES */
 
 #features{
-
-  padding:
-    100px 7%;
+  padding:100px 7%;
 
   position:relative;
-
   z-index:2;
 
   text-align:center;
 }
 
-
 h2{
-
   margin-bottom:45px;
 
-  font-size:
-    clamp(30px,6vw,55px);
+  font-size:clamp(30px,6vw,55px);
 
   line-height:1.1;
 
   letter-spacing:3px;
 }
 
-
 .cards{
-
   max-width:1100px;
 
   margin:auto;
@@ -734,17 +559,12 @@ h2{
   display:grid;
 
   grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(220px,1fr)
-    );
+    repeat(auto-fit,minmax(220px,1fr));
 
   gap:18px;
 }
 
-
 .card{
-
   min-height:230px;
 
   padding:28px;
@@ -758,19 +578,15 @@ h2{
       #08000e
     );
 
-  border:
-    1px solid #3b1750;
+  border:1px solid #3b1750;
 
   border-radius:15px;
 
   transition:.3s;
 }
 
-
 .card:hover{
-
-  transform:
-    translateY(-8px);
+  transform:translateY(-8px);
 
   border-color:#9a38c8;
 
@@ -778,399 +594,288 @@ h2{
     0 0 30px rgba(133,31,201,.2);
 }
 
-
 .number{
-
   color:#8b35ae;
 
   font-size:11px;
-
   letter-spacing:2px;
 }
 
-
 .card-icon{
-
-  margin:
-    24px 0 15px;
+  margin:24px 0 15px;
 
   color:#c451ff;
 
   font-size:32px;
 
-  text-shadow:
-    0 0 15px #a22cff;
+  text-shadow:0 0 15px #a22cff;
 }
 
-
 .card h3{
-
   margin-bottom:12px;
 
   color:#dc9aff;
 
   font-size:15px;
-
   letter-spacing:2px;
 }
 
-
 .card p{
-
   color:#9e8ba7;
 
   font-size:13px;
-
   line-height:1.7;
 }
 
 
-/* =========================================
-   FINAL DOWNLOAD
-   ========================================= */
+/* FINAL DOWNLOAD */
 
 .download-section{
-
-  padding:
-    100px 20px;
+  padding:100px 20px;
 
   text-align:center;
 
   position:relative;
-
   z-index:2;
 
-  border-top:
-    1px solid #291033;
+  border-top:1px solid #291033;
 }
 
-
 .download-text{
-
   margin-bottom:30px;
 
   color:#9e8ba7;
 }
 
-
 .download.big{
-
   min-width:260px;
 
-  padding:
-    18px 35px;
+  padding:18px 35px;
 
   font-size:15px;
 }
 
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* FOOTER */
 
 footer{
-
-  padding:
-    25px 7%;
+  padding:25px 7%;
 
   display:flex;
 
   justify-content:space-between;
+  align-items:center;
 
-  border-top:
-    1px solid #291033;
+  gap:15px;
+
+  border-top:1px solid #291033;
 
   color:#684e71;
 
   font-size:10px;
-
   letter-spacing:2px;
+}
 
+footer a{
+  color:#c451ff;
+
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+footer a:hover{
+  color:#ff8a00;
+
+  text-shadow:
+    0 0 15px #ff6500;
 }
 
 
-/* =========================================
-   MOBILE
-   ========================================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
   header{
-
     height:70px;
-
-    padding:
-      10px 5%;
+    padding:10px 5%;
   }
 
-
   .brand{
-
     gap:9px;
 
     font-size:13px;
-
     letter-spacing:2px;
   }
 
-
   .brand img{
-
     width:38px;
     height:38px;
-
     border-radius:9px;
   }
 
-
   .github{
-
-    padding:
-      10px 12px;
-
+    padding:10px 12px;
     font-size:10px;
   }
 
-
   .hero{
-
     min-height:650px;
 
     padding:
       45px 18px 70px;
   }
 
-
   .status{
-
     font-size:10px;
-
-    padding:
-      9px 15px;
+    padding:9px 15px;
   }
 
-
-  /* SMALL MOBILE LOGO */
-
   .logo-box{
-
     width:175px;
-
     height:175px;
 
     margin:
       25px 0 18px;
   }
 
-
   .hero-logo{
-
     width:120px;
-
     height:120px;
 
     border-radius:24px;
   }
 
-
   .ring1{
-
     width:150px;
-
     height:150px;
   }
 
-
   .ring2{
-
     width:170px;
-
     height:110px;
   }
 
-
   .ring3{
-
     width:135px;
-
     height:170px;
   }
 
-
   .mini{
-
     font-size:9px;
-
     letter-spacing:3px;
   }
 
-
   h1{
-
     font-size:
       clamp(42px,13vw,65px);
 
     letter-spacing:3px;
   }
 
-
   .description{
-
     font-size:14px;
-
     line-height:1.7;
   }
 
-
-  /* STACK BUTTONS */
-
   .buttons{
-
     flex-direction:column;
-
     gap:13px;
 
     margin-top:27px;
   }
 
-
   .download,
-  .explore{
-
+  .explore-ai{
     width:100%;
-
     max-width:320px;
 
     min-width:0;
   }
 
-
   .info{
-
     margin-top:45px;
-
     gap:25px;
   }
 
-
   #features{
-
-    padding:
-      80px 18px;
+    padding:80px 18px;
   }
 
-
   h2{
-
     font-size:
       clamp(30px,9vw,45px);
 
     margin-bottom:35px;
   }
 
-
   .cards{
-
     grid-template-columns:1fr;
   }
 
-
   .card{
-
     min-height:200px;
   }
 
-
   .download-section{
-
-    padding:
-      80px 18px;
+    padding:80px 18px;
   }
 
-
   .download.big{
-
     width:100%;
-
     max-width:320px;
   }
 
-
   footer{
-
-    padding:
-      22px 5%;
-
-    font-size:9px;
+    padding:22px 5%;
+    font-size:8px;
   }
-
 }
 
 
-/* =========================================
-   VERY SMALL PHONES
-   ========================================= */
+/* VERY SMALL PHONES */
 
 @media(max-width:380px){
 
   .brand{
-
     font-size:11px;
   }
 
-
   .github{
-
     font-size:9px;
-
-    padding:
-      9px 10px;
+    padding:9px 10px;
   }
 
-
   .logo-box{
-
     width:160px;
-
     height:160px;
   }
 
-
   .hero-logo{
-
     width:110px;
-
     height:110px;
   }
 
-
   .ring1{
-
     width:140px;
-
     height:140px;
   }
 
-
   .ring2{
-
     width:155px;
-
     height:100px;
   }
 
-
   .ring3{
-
     width:125px;
-
     height:155px;
   }
 
-
   h1{
-
     font-size:40px;
   }
 
+  footer{
+    font-size:7px;
+  }
 }
